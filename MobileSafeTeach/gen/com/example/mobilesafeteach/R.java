@@ -22,20 +22,38 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int launcher_bg=0x7f020001;
+        public static final int home_apps=0x7f020000;
+        public static final int home_callmsgsafe=0x7f020001;
+        public static final int home_netmanager=0x7f020002;
+        public static final int home_safe=0x7f020003;
+        public static final int home_settings=0x7f020004;
+        public static final int home_sysoptimize=0x7f020005;
+        public static final int home_taskmanager=0x7f020006;
+        public static final int home_tools=0x7f020007;
+        public static final int home_trojan=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int launcher_bg=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
-        public static final int pb_loading=0x7f080003;
-        public static final int rl_root=0x7f080001;
-        public static final int tv_name=0x7f080002;
-        public static final int tv_progress=0x7f080004;
-        public static final int tv_title=0x7f080000;
+        public static final int action_settings=0x7f08000b;
+        public static final int cb_check=0x7f08000a;
+        public static final int gv_home=0x7f080000;
+        public static final int iv_icon=0x7f080007;
+        public static final int pb_loading=0x7f080005;
+        public static final int rl_root=0x7f080003;
+        public static final int siv_update=0x7f080002;
+        public static final int textView1=0x7f080001;
+        public static final int tv_desc=0x7f080009;
+        public static final int tv_name=0x7f080004;
+        public static final int tv_progress=0x7f080006;
+        public static final int tv_title=0x7f080008;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
-        public static final int activity_splash=0x7f030001;
+        public static final int activity_setting=0x7f030001;
+        public static final int activity_splash=0x7f030002;
+        public static final int list_item_home=0x7f030003;
+        public static final int setting_item_view=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;

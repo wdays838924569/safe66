@@ -26,6 +26,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -70,7 +71,7 @@ public class SplashActivity extends Activity {
 	private RelativeLayout rlRoot;
 	
 	private static final int CODE_UPDATE_DIALOG=1;
-	private static final int CODE_ENTER_DIALOG=2;
+	private static final int CODE_ENTER_HOME=2;
 	private static final int CODE_URL_ERROR=3;
 	private static final int CODE_NETWORK_ERROR=4;
 	private static final int CODE_JSON_ERROR=5;
@@ -85,7 +86,7 @@ public class SplashActivity extends Activity {
 			case CODE_UPDATE_DIALOG:
 				showUpdateDialog();
 				break;
-			case CODE_ENTER_DIALOG:
+			case CODE_ENTER_HOME:
 				enterHome();
 				break;
 			case CODE_URL_ERROR:
@@ -116,6 +117,15 @@ public class SplashActivity extends Activity {
         tvProgres=(TextView) findViewById(R.id.tv_progress);
         rlRoot=(RelativeLayout) findViewById(R.id.rl_root);
         
+        
+        
+        SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+        boolean autoUpdate=sp.getBoolean("auto_update", true);
+        if(autoUpdate) {//需要检查版本
+			checkVersion();
+		}else {
+			mHandler.sendEmptyMessageDelayed(CODE_ENTER_HOME, 2000);//发送延时两秒的消息,再跳主页面
+		}
         checkVersion();
         //渐变效果
         AlphaAnimation anim = new AlphaAnimation(0.2f, 1);
@@ -164,7 +174,7 @@ public class SplashActivity extends Activity {
 							msg.what=CODE_UPDATE_DIALOG;
 						}else{
 							System.out.println("无更新");
-							msg.what=CODE_ENTER_DIALOG;
+							msg.what=CODE_ENTER_HOME;
 							
 						}
 					}

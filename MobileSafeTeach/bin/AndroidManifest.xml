@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.HomeActivity"/>
+        <activity android:name="com.example.mobilesafeteach.activity.SettingActivity"></activity>
     </application>
 
 </manifest>
