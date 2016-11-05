@@ -9,6 +9,30 @@ package com.example.mobilesafeteach;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int desc_off=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int desc_on=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -22,38 +46,64 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int home_apps=0x7f020000;
-        public static final int home_callmsgsafe=0x7f020001;
-        public static final int home_netmanager=0x7f020002;
-        public static final int home_safe=0x7f020003;
-        public static final int home_settings=0x7f020004;
-        public static final int home_sysoptimize=0x7f020005;
-        public static final int home_taskmanager=0x7f020006;
-        public static final int home_tools=0x7f020007;
-        public static final int home_trojan=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int launcher_bg=0x7f02000a;
+        public static final int bg_btn_normal=0x7f020000;
+        public static final int bg_btn_pressed=0x7f020001;
+        public static final int bind=0x7f020002;
+        public static final int btn_green_normal=0x7f020003;
+        public static final int btn_green_pressed=0x7f020004;
+        public static final int btn_green_selector=0x7f020005;
+        public static final int btn_light_green_selector=0x7f020006;
+        public static final int button=0x7f020007;
+        public static final int button_normal=0x7f020008;
+        public static final int button_pressed=0x7f020009;
+        public static final int home_apps=0x7f02000a;
+        public static final int home_callmsgsafe=0x7f02000b;
+        public static final int home_netmanager=0x7f02000c;
+        public static final int home_safe=0x7f02000d;
+        public static final int home_settings=0x7f02000e;
+        public static final int home_sysoptimize=0x7f02000f;
+        public static final int home_taskmanager=0x7f020010;
+        public static final int home_tools=0x7f020011;
+        public static final int home_trojan=0x7f020012;
+        public static final int ic_launcher=0x7f020013;
+        public static final int icon=0x7f020014;
+        public static final int launcher_bg=0x7f020015;
+        public static final int phone=0x7f020016;
+        public static final int setup1=0x7f020017;
+        public static final int setup1_1=0x7f020018;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
-        public static final int cb_check=0x7f08000a;
+        public static final int action_settings=0x7f080010;
+        public static final int btn_cancel=0x7f08000a;
+        public static final int btn_ok=0x7f080009;
+        public static final int cb_check=0x7f08000f;
+        public static final int et_pwd=0x7f080008;
+        public static final int et_pwd_confirm=0x7f08000b;
         public static final int gv_home=0x7f080000;
-        public static final int iv_icon=0x7f080007;
-        public static final int pb_loading=0x7f080005;
-        public static final int rl_root=0x7f080003;
+        public static final int imageView1=0x7f080003;
+        public static final int iv_icon=0x7f08000c;
+        public static final int pb_loading=0x7f080006;
+        public static final int rl_root=0x7f080004;
         public static final int siv_update=0x7f080002;
         public static final int textView1=0x7f080001;
-        public static final int tv_desc=0x7f080009;
-        public static final int tv_name=0x7f080004;
-        public static final int tv_progress=0x7f080006;
-        public static final int tv_title=0x7f080008;
+        public static final int tv_desc=0x7f08000e;
+        public static final int tv_name=0x7f080005;
+        public static final int tv_progress=0x7f080007;
+        public static final int tv_title=0x7f08000d;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
-        public static final int activity_setting=0x7f030001;
-        public static final int activity_splash=0x7f030002;
-        public static final int list_item_home=0x7f030003;
-        public static final int setting_item_view=0x7f030004;
+        public static final int activity_lostandfind=0x7f030001;
+        public static final int activity_setting=0x7f030002;
+        public static final int activity_setup1=0x7f030003;
+        public static final int activity_setup2=0x7f030004;
+        public static final int activity_setup3=0x7f030005;
+        public static final int activity_setup4=0x7f030006;
+        public static final int activity_splash=0x7f030007;
+        public static final int dialog_input_pwd=0x7f030008;
+        public static final int dialog_set_pwd=0x7f030009;
+        public static final int list_item_home=0x7f03000a;
+        public static final int setting_item_view=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -89,6 +139,70 @@ public final class R {
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int ContentStyle=0x7f060003;
+        public static final int NextStyle=0x7f060004;
+        public static final int PreviousStyle=0x7f060005;
         public static final int TitleStyle=0x7f060002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a SettingItemView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SettingItemView_desc_off com.example.mobilesafeteach:desc_off}</code></td><td></td></tr>
+           <tr><td><code>{@link #SettingItemView_desc_on com.example.mobilesafeteach:desc_on}</code></td><td></td></tr>
+           <tr><td><code>{@link #SettingItemView_title com.example.mobilesafeteach:title}</code></td><td></td></tr>
+           </table>
+           @see #SettingItemView_desc_off
+           @see #SettingItemView_desc_on
+           @see #SettingItemView_title
+         */
+        public static final int[] SettingItemView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafeteach.R.attr#desc_off}
+          attribute's value can be found in the {@link #SettingItemView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafeteach:desc_off
+        */
+        public static final int SettingItemView_desc_off = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafeteach.R.attr#desc_on}
+          attribute's value can be found in the {@link #SettingItemView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafeteach:desc_on
+        */
+        public static final int SettingItemView_desc_on = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafeteach.R.attr#title}
+          attribute's value can be found in the {@link #SettingItemView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafeteach:title
+        */
+        public static final int SettingItemView_title = 0;
+    };
 }

@@ -16,9 +16,12 @@ import com.example.mobilesafeteach.R;
  */
 public class SettingItemView extends RelativeLayout {
 	
+	private static final String NAMESPACE = "http://schemas.android.com/apk/res/com.example.mobilesafeteach";
 	private TextView tvTitle;
 	private TextView tvDesc;
 	private CheckBox cbCheck;
+	private String mDescOn;
+	private String mDescOff;
 	
 	public SettingItemView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -28,7 +31,18 @@ public class SettingItemView extends RelativeLayout {
 	public SettingItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initView();
-
+		 int count = attrs.getAttributeCount();
+//		 for (int i = 0; i < count; i++) {
+//			 String attributeName = attrs.getAttributeName(i);
+//			 String attributeValue = attrs.getAttributeValue(i);
+//			// System.out.println(attributeName + "=" + attributeValue);
+//		 }
+		 
+		 String title = attrs.getAttributeValue(NAMESPACE, "title");
+	   	mDescOn = attrs.getAttributeValue(NAMESPACE, "desc_on");
+		mDescOff = attrs.getAttributeValue(NAMESPACE, "desc_off");
+		
+		setTitle(title);
 	}
 
 	public SettingItemView(Context context) {
@@ -78,12 +92,12 @@ public class SettingItemView extends RelativeLayout {
 	public void setChecked(boolean checked) {
 		cbCheck.setChecked(checked);
 
-//		// 更新描述信息
-//		if (checked) {
-//			setDesc(mDescOn);
-//		} else {
-//			setDesc(mDescOff);
-//		}
+		// 更新描述信息
+		if (checked) {
+			setDesc(mDescOn);
+		} else {
+			setDesc(mDescOff);
+		}
 	}
 
 

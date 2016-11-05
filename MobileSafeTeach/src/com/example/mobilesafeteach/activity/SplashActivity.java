@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 
 import com.example.mobilesafeteach.R;
+import com.example.mobilesafeteach.utils.PrefUtils;
 import com.example.mobilesafeteach.utils.StreamUtils;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
@@ -119,8 +120,8 @@ public class SplashActivity extends Activity {
         
         
         
-        SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
-        boolean autoUpdate=sp.getBoolean("auto_update", true);
+        //SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+        boolean autoUpdate=PrefUtils.getBoolean("auto_update", true,this);
         if(autoUpdate) {//需要检查版本
 			checkVersion();
 		}else {
